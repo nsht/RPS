@@ -1,22 +1,22 @@
 import random
 
-
+#initialise the variables
 umove=''
 cmove=''
 
 score = [0,0]
 
 print("Rock(R),Paper(P),Scissors(S)")
-moves = ['R','r','P','p','S','s']
+moves = ['R','r','P','p','S','s'] #for specifing the moves
 
 #user move
 def move():
     global umove
     umove = input("Enter R,P,S").upper()
-    if umove in moves:
+    if umove in moves: #Retry if illegal move.
         print("Your Move "+umove)
     else:
-        move()
+        move() 
 
 #computer move
 def comove():
